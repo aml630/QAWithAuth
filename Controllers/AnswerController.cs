@@ -29,16 +29,16 @@ namespace StackOverflow.Controllers
             _db = db;
         }
 
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        //public IActionResult Create(int id)
+        //public IActionResult Create()
         //{
-        //    var Deets = db.Answers.FirstOrDefault(x => x.QuestionId == id);
-        //    return View(Deets);
+        //    return View();
         //}
+
+        public IActionResult Create(int id)
+        {
+            ViewData["QuestionId"] = id;
+                return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Create(Answer answer)

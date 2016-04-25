@@ -11,8 +11,8 @@
     @Html.LabelFor(model => model.AnswerBody)
     @Html.EditorFor(model => model.AnswerBody)
 
-    @Html.LabelFor(model => model.QuestionId)
-    @Html.EditorFor(model => model.QuestionId)
-    @*@Html.HiddenFor(x => x.Id)*@
+    @*@Html.LabelFor(model => model.QuestionId)
+    @Html.EditorFor(model => model.QuestionId)*@
+    @Html.Hidden("QuestionId")
     <input type="submit" value="Create" />
 }

@@ -9,8 +9,8 @@
 @foreach (var question in Model)
 {
     @Html.DisplayFor(x => question.Body);
-    @*<p>@Html.ActionLink("Answer Question", "Create", "Answer", new { id = question.Id })</p>*@
-    <p>@Html.ActionLink("Answer Question", "Create", "Answer")</p>
+    <p>@Html.ActionLink("Answer Question", "Create", "Answer", new { id = question.Id })</p>
+    @*<p>@Html.ActionLink("Answer Question", "Create", "Answer")</p>*@
 
     @foreach (var answer in question.Answers)
         {
